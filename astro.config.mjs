@@ -7,7 +7,7 @@ import { defineConfig } from 'astro/config';
 // e ricostruisci: npm run build -> dist/ è copiabile via rsync/scp ovunque.
 export default defineConfig({
   site: 'https://aledamelio.github.io',
-  base: '/',
+  base: '/website',
   output: 'static',
   build: {
     inlineStylesheets: 'auto',
