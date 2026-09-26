@@ -5,8 +5,11 @@ interface Props {
   ogImage?: string;
 }
 const { title, description = "Alessandro D'Amelio — Tenure Track Assistant Professor, Computer Science, Università degli Studi di Milano. Visual Attention, Remote Physiological Sensing, Affective Computing.", ogImage = "/assets/profile.jpg" } = Astro.props;
-const canonical = new URL(Astro.url.pathname, Astro.site);
 const path = Astro.url.pathname;
+// new URL('/x', site) scarta il path del site (es. /website) -> uniamo a mano
+const siteRoot = (Astro.site?.href ?? '').replace(/\/$/, '');
+const absUrl = (p: string) => new URL(siteRoot + (p.startsWith('/') ? p : `/${p}`));
+const canonical = absUrl(path);
 const isActive = (href: string) => href === '/' ? path === '/' : path.startsWith(href);
 ---
 <!doctype html>
@@ -15,6 +18,7 @@ const isActive = (href: string) => href === '/' ? path === '/' : path.startsWith
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
+    {import.meta.env.PROD && <base href="/website/" />}
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -22,7 +26,7 @@ const isActive = (href: string) => href === '/' ? path === '/' : path.startsWith
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={new URL(ogImage, Astro.site)} />
+    <meta property="og:image" content={absUrl(ogImage)} />
     <meta name="twitter:card" content="summary" />
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",

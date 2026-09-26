@@ -2,7 +2,6 @@
 import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import selected from '../data/selected.json';
-const base = import.meta.env.BASE_URL;
 
 const selectedBold = (selected as any[]).map(p => ({
   ...p,
@@ -27,7 +26,7 @@ const fmt = (d: Date) => `${d.getDate()}${ord(d.getDate())} ${MONTHS[d.getMonth(
       <div>
         <div class="pill" style="margin-bottom:2px"><span class="pill-dot"></span> Tenure Track Assistant Professor · UniMi</div>
         <div style="display:flex;gap:20px;align-items:center;margin-top:14px;flex-wrap:wrap">
-          <img src={`${import.meta.env.BASE_URL}/assets/profile.jpg`} alt="Alessandro D'Amelio" onerror="this.style.display='none'" style="width:160px;height:160px;border-radius:50%;object-fit:cover;border:3px solid #fff;outline:1px solid var(--border);box-shadow:var(--shadow);background:linear-gradient(135deg,#e0e7ff,#f0f4ff);flex-shrink:0" />
+          <img src="/assets/profile.jpg" alt="Alessandro D'Amelio" onerror="this.style.display='none'" style="width:160px;height:160px;border-radius:50%;object-fit:cover;border:3px solid #fff;outline:1px solid var(--border);box-shadow:var(--shadow);background:linear-gradient(135deg,#e0e7ff,#f0f4ff);flex-shrink:0" />
           <h1 class="h1" style="margin:0;line-height:1.02">Alessandro D'Amelio</h1>
         </div>
         <p class="muted" style="margin:12px 0 0;font-size:1.02rem">Dipartimento di Informatica “Giovanni Degli Antoni” — Università degli Studi di Milano. Member of <a href="http://phuselab.di.unimi.it" target="_blank" rel="noopener">PHuSe Lab</a>.</p>
@@ -46,7 +45,7 @@ const fmt = (d: Date) => `${d.getDate()}${ord(d.getDate())} ${MONTHS[d.getMonth(
       <!-- Right: Latest news -->
       <div class="card" style="align-self:start">
         <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
-          <h2 class="h2" style="margin:0">Latest news</h2><a href={`${import.meta.env.BASE_URL}/news`} style="font-size:0.86rem;font-weight:600">View all →</a>
+          <h2 class="h2" style="margin:0">Latest news</h2><a href="/news" style="font-size:0.86rem;font-weight:600">View all →</a>
         </div>
         <div style="margin-top:8px">
           {latestNews.map(async n => {
@@ -56,7 +55,7 @@ const fmt = (d: Date) => `${d.getDate()}${ord(d.getDate())} ${MONTHS[d.getMonth(
             return (
               <div class="news-item">
                 <div class="news-date">{fmt(n.data.date)}</div>
-                <div class="news-label"><a href={`${import.meta.env.BASE_URL}/news#${n.slug}`}>{venue} · {typeLabel}</a></div>
+                <div class="news-label"><a href={`/news#${n.slug}`}>{venue} · {typeLabel}</a></div>
                 <div class="news-body"><Content /></div>
               </div>
             );
@@ -70,7 +69,7 @@ const fmt = (d: Date) => `${d.getDate()}${ord(d.getDate())} ${MONTHS[d.getMonth(
   <section class="card" style="margin-top:18px">
     <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
       <div class="kicker">Contacts</div>
-      <a href={`${import.meta.env.BASE_URL}/contacts`} style="font-size:0.84rem;font-weight:600">Full contacts →</a>
+      <a href="/contacts" style="font-size:0.84rem;font-weight:600">Full contacts →</a>
     </div>
     <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:12px">
       <a href="mailto:alessandro.damelio@unimi.it" style="display:inline-flex;align-items:center;gap:8px;font-weight:600"><span style="width:28px;height:28px;border-radius:999px;display:grid;place-items:center;background:var(--accent-ghost);border:1px solid #dbeafe;color:var(--accent)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></span> alessandro.damelio@unimi.it</a>
@@ -90,7 +89,7 @@ const fmt = (d: Date) => `${d.getDate()}${ord(d.getDate())} ${MONTHS[d.getMonth(
   <section style="margin-top:18px">
     <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
       <h2 class="h2" style="margin:0">Selected publications</h2>
-      <a href={`${import.meta.env.BASE_URL}/publications`} style="font-size:0.9rem;font-weight:600">All publications →</a>
+      <a href="/publications" style="font-size:0.9rem;font-weight:600">All publications →</a>
     </div>
     <div class="card">
       {selectedBold.map((p:any) => (
