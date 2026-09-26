@@ -26,7 +26,7 @@ const fmt = (d: Date) => `${d.getDate()}${ord(d.getDate())} ${MONTHS[d.getMonth(
       <div>
         <div class="pill" style="margin-bottom:2px"><span class="pill-dot"></span> Tenure Track Assistant Professor · UniMi</div>
         <div style="display:flex;gap:20px;align-items:center;margin-top:14px;flex-wrap:wrap">
-          <img src="/assets/profile.jpg" alt="Alessandro D'Amelio" onerror="this.style.display='none'" style="width:160px;height:160px;border-radius:50%;object-fit:cover;border:3px solid #fff;outline:1px solid var(--border);box-shadow:var(--shadow);background:linear-gradient(135deg,#e0e7ff,#f0f4ff);flex-shrink:0" />
+          <img src={`${import.meta.env.BASE_URL}/assets/profile.jpg`} alt="Alessandro D'Amelio" onerror="this.style.display='none'" style="width:160px;height:160px;border-radius:50%;object-fit:cover;border:3px solid #fff;outline:1px solid var(--border);box-shadow:var(--shadow);background:linear-gradient(135deg,#e0e7ff,#f0f4ff);flex-shrink:0" />
           <h1 class="h1" style="margin:0;line-height:1.02">Alessandro D'Amelio</h1>
         </div>
         <p class="muted" style="margin:12px 0 0;font-size:1.02rem">Dipartimento di Informatica “Giovanni Degli Antoni” — Università degli Studi di Milano. Member of <a href="http://phuselab.di.unimi.it" target="_blank" rel="noopener">PHuSe Lab</a>.</p>
