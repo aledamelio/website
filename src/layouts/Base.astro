@@ -1,0 +1,171 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+}
+const { title, description = "Alessandro D'Amelio — Tenure Track Assistant Professor, Computer Science, Università degli Studi di Milano. Visual Attention, Remote Physiological Sensing, Affective Computing.", ogImage = "/assets/profile.jpg" } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const path = Astro.url.pathname;
+const isActive = (href: string) => href === '/' ? path === '/' : path.startsWith(href);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(ogImage, Astro.site)} />
+    <meta name="twitter:card" content="summary" />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Alessandro D'Amelio",
+      jobTitle: "Tenure Track Assistant Professor",
+      affiliation: { "@type": "Organization", name: "Università degli Studi di Milano", url: "https://www.unimi.it" },
+      url: String(canonical),
+      sameAs: [
+        "https://scholar.google.it/citations?user=chkawtoAAAAJ",
+        "https://orcid.org/0000-0002-8210-4457",
+        "https://github.com/aledamelio",
+        "https://www.linkedin.com/in/alessandro-d-amelio-aa76b8161"
+      ]
+    })} />
+    <title>{title}</title>
+    <style is:global>
+      :root {
+        --bg: #fcfcfe;
+        --bg-warm: #f8f7ff;
+        --fg: #0f172a;
+        --muted: #64748b;
+        --muted2: #94a3b8;
+        --border: #e2e8f0;
+        --border-strong: #cbd5e1;
+        --accent: #1e3a8a;
+        --accent-2: #3b82f6;
+        --accent-light: #eff6ff;
+        --accent-ghost: #f0f4ff;
+        --max: 1120px;
+        --radius: 18px;
+        --radius-lg: 22px;
+        --shadow: 0 1px 2px rgba(15,23,42,0.05), 0 8px 28px rgba(15,23,42,0.06);
+        --shadow-hover: 0 2px 4px rgba(15,23,42,0.05), 0 12px 36px rgba(15,23,42,0.09);
+        --font-sans: "Inter", ui-sans-system, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: var(--font-sans);
+        color: var(--fg);
+        background: linear-gradient(180deg, var(--bg-warm) 0%, var(--bg) 360px);
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      ::selection { background: #dbeafe; }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; text-underline-offset: 3px; }
+      a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 2px; border-radius: 6px; }
+      .container { max-width: var(--max); margin: 0 auto; padding: 0 22px; }
+      header {
+        position: sticky; top: 0; z-index: 20;
+        backdrop-filter: saturate(180%) blur(12px);
+        -webkit-backdrop-filter: saturate(180%) blur(12px);
+        background: rgba(252,252,254,0.84);
+        border-bottom: 1px solid var(--border);
+      }
+      .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+      .brand { font-weight: 800; letter-spacing: -0.03em; color: var(--fg); font-size: 1.1rem; }
+      .brand span { color: var(--accent); }
+      .brand small { font-weight: 500; color: var(--muted); font-size: 0.78rem; letter-spacing: 0.02em; margin-left: 8px; }
+      .nav-links { display: flex; gap: 6px; font-size: 0.88rem; }
+      .nav-links a { color: var(--muted); font-weight: 600; padding: 8px 12px; border-radius: 999px; transition: all .18s ease; }
+      .nav-links a:hover { background: var(--accent-ghost); color: var(--accent); text-decoration: none; }
+      .nav-links a[aria-current="page"] { background: var(--fg); color: white; }
+      .hero { padding: 52px 0 16px; }
+      .hero-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: start; }
+      @media (max-width: 880px) { .hero-grid { grid-template-columns: 1fr; } .brand small { display: none; } }
+      .card { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); transition: box-shadow .2s ease, transform .2s ease; }
+      .card:hover { box-shadow: var(--shadow-hover); transform: translateY(-1px); }
+      .card-flat { box-shadow: none; }
+      .muted { color: var(--muted); }
+      .pill { display: inline-flex; align-items: center; gap: 6px; font-size: 0.72rem; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 700; background: var(--accent-light); color: var(--accent); padding: 6px 12px; border-radius: 999px; border: 1px solid #dbeafe; }
+      .pill-dot { width: 7px; height: 7px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 3px #dcfce7; }
+      .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--fg); color: white; padding: 11px 18px; border-radius: 999px; font-weight: 650; font-size: 0.88rem; border: 1px solid var(--fg); transition: all .18s ease; }
+      .btn:hover { background: #1e293b; text-decoration: none; transform: translateY(-1px); }
+      .btn.secondary { background: white; color: var(--fg); border-color: var(--border-strong); }
+      .btn.secondary:hover { background: var(--bg); border-color: var(--fg); }
+      .btn.ghost { background: transparent; color: var(--accent); border-color: transparent; }
+      .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+      @media (max-width: 900px) { .grid-3 { grid-template-columns: 1fr; } }
+      .pub { padding: 15px 0; border-bottom: 1px solid var(--border); }
+      .pub:last-child { border-bottom: 0; }
+      .pub-title { font-weight: 650; line-height: 1.38; font-size: 0.96rem; }
+      .pub-meta { font-size: 0.86rem; color: var(--muted); margin-top: 2px; }
+      .badge { font-family: var(--font-mono); font-size: 0.7rem; background: #f8fafc; border: 1px solid var(--border); padding: 4px 9px; border-radius: 999px; color: var(--muted); }
+      .badge-accent { background: var(--accent-light); border-color: #dbeafe; color: var(--accent); }
+      footer { border-top: 1px solid var(--border); margin-top: 56px; padding: 26px 0 32px; color: var(--muted); font-size: 0.86rem; background: white; }
+      .kicker { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 800; }
+      .h1 { font-size: clamp(2rem, 3.8vw, 2.9rem); line-height: 1.02; letter-spacing: -0.04em; margin: 10px 0 10px; font-weight: 800; }
+      .h2 { font-size: 1.28rem; letter-spacing: -0.02em; margin: 0 0 12px; font-weight: 750; }
+      .h3 { font-size: 1.02rem; margin: 0 0 6px; font-weight: 700; }
+      img.avatar { width: 100%; aspect-ratio: 4/3.2; object-fit: cover; border-radius: var(--radius-lg); border: 1px solid var(--border); background: linear-gradient(135deg, #e0e7ff, #f0f4ff); box-shadow: var(--shadow); }
+      .prose p { margin: 0 0 10px; }
+      .prose ul { margin: 8px 0; padding-left: 18px; }
+      .news-item { padding: 14px 0; border-bottom: 1px solid var(--border); }
+      .news-item:last-child { border-bottom: 0; }
+      .news-label { font-weight: 650; font-size: 0.84rem; line-height: 1.35; margin-bottom: 3px; }
+      .news-body { font-size: 0.86rem; line-height: 1.55; color: var(--muted); }
+      .news-body p { margin: 0 0 6px; }
+      .news-body p:last-child { margin-bottom: 0; }
+      .news-body strong { color: var(--fg); }
+      .news-date { font-family: var(--font-mono); font-size: 0.76rem; color: var(--muted); font-weight: 600; white-space: nowrap; margin-bottom: 2px; }
+      .timeline { position: relative; padding-left: 28px; border-left: 2px solid var(--border); margin-left: 8px; }
+      .timeline-dot { position: absolute; left: -9px; top: 10px; width: 10px; height: 10px; border-radius: 50%; background: white; border: 3px solid var(--accent); box-shadow: 0 0 0 4px var(--accent-ghost); }
+      .timeline-item { position: relative; padding: 8px 0 14px 4px; }
+      .timeline-item:last-child { padding-bottom: 2px; }
+      .icon-box { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; background: var(--accent-ghost); border: 1px solid #dbeafe; font-size: 1.1rem; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <a class="brand" href="/">Alessandro <span>D'Amelio</span> <small>UniMi · PHuSe Lab</small></a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="/" aria-current={isActive('/') ? 'page' : undefined}>Home</a>
+          <a href="/publications" aria-current={isActive('/publications') ? 'page' : undefined}>Publications</a>
+          <a href="/activities" aria-current={isActive('/activities') ? 'page' : undefined}>Activities</a>
+          <a href="/teaching" aria-current={isActive('/teaching') ? 'page' : undefined}>Teaching</a>
+          <a href="/news" aria-current={isActive('/news') ? 'page' : undefined}>News</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <slot />
+    </main>
+    <footer>
+      <div class="container">
+        <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center">
+          <span>© {new Date().getFullYear()} Alessandro D'Amelio — Università degli Studi di Milano</span>
+          <span style="display:flex;gap:12px;align-items:center">
+            <a href="mailto:alessandro.damelio@unimi.it">Email</a>
+            <span style="color:var(--border-strong)">·</span>
+            <a href="https://scholar.google.it/citations?user=chkawtoAAAAJ" target="_blank" rel="noopener">Scholar</a>
+            <a href="https://orcid.org/0000-0002-8210-4457" target="_blank" rel="noopener">ORCID</a>
+            <a href="https://github.com/aledamelio" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/alessandro-d-amelio-aa76b8161" target="_blank" rel="noopener">LinkedIn</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

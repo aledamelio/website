@@ -1,0 +1,26 @@
+---
+interface Props {
+  title: string;
+  authors: string;
+  venue: string;
+  year: number;
+  doi?: string;
+  url?: string;
+  pdf?: string;
+  citations?: number;
+  type?: string;
+}
+const { title, authors, venue, year, doi, url, pdf, citations, type } = Astro.props;
+const href = doi ? `https://doi.org/${doi}` : url;
+---
+<div class="pub">
+  <div class="pub-title"><a href={href} target="_blank" rel="noopener">{title}</a> <span class="muted" style="font-weight:400">({year})</span></div>
+  <div class="pub-meta">{authors} · <em>{venue}</em></div>
+  <div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+    {type && <span class="badge">{type}</span>}
+    {citations !== undefined && <span class="badge">{citations} cites</span>}
+    {doi && <a class="badge" href={`https://doi.org/${doi}`} target="_blank" rel="noopener">DOI</a>}
+    {pdf && <a class="badge" href={pdf} target="_blank" rel="noopener">PDF</a>}
+    {href && <a class="badge" href={href} target="_blank" rel="noopener">Link</a>}
+  </div>
+</div>

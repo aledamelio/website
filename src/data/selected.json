@@ -1,0 +1,42 @@
+[
+  {
+    "title": "TPP-Gaze: Modelling Gaze Dynamics in Space and Time with Neural Temporal Point Processes",
+    "authors": "D'Amelio, A., Cartella, G., Cuculo, V., Lucchi, M., Cornia, M., Cucchiara, R., & Boccignone, G.",
+    "venue": "Winter Conference on Applications of Computer Vision (WACV)",
+    "year": 2025,
+    "doi": "10.1109/WACV61041.2025.00851",
+    "url": null,
+    "short": "WACV",
+    "type": "conference"
+  },
+  {
+    "title": "Modeling Human Gaze Behavior with Diffusion Models for Unified Scanpath Prediction",
+    "authors": "Cartella, G., Cuculo, V., D'Amelio, A., Cornia, M., Boccignone, G., & Cucchiara, R.",
+    "venue": "IEEE/CVF International Conference on Computer Vision (ICCV)",
+    "year": 2025,
+    "doi": "10.48550/arXiv.2507.23021",
+    "url": null,
+    "short": "ICCV",
+    "type": "conference"
+  },
+  {
+    "title": "CliffPhys: Camera-Based Respiratory Measurement Using Clifford Neural Networks",
+    "authors": "Ghezzi, O., Boccignone, G., Grossi, G., Lanzarotti, R., & D'Amelio, A.",
+    "venue": "European Conference on Computer Vision (ECCV)",
+    "year": 2024,
+    "doi": "10.1007/978-3-031-73013-9_13",
+    "url": null,
+    "short": "ECCV",
+    "type": "conference"
+  },
+  {
+    "title": "Trends, Applications, and Challenges in Human Attention Modelling",
+    "authors": "Cartella, G., Cornia, M., Cuculo, V., D'Amelio, A., Zanca, D., Boccignone, G., & Cucchiara, R.",
+    "venue": "International Joint Conference on Artificial Intelligence (IJCAI)",
+    "year": 2024,
+    "doi": "10.24963/ijcai.2024/882",
+    "url": null,
+    "short": "IJCAI",
+    "type": "conference"
+  }
+]

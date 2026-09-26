@@ -1,0 +1,72 @@
+---
+import Base from '../layouts/Base.astro';
+import pubs from '../data/publications.json';
+const byYear = [...new Set(pubs.map((p:any)=>p.year))].sort((a,b)=>b-a);
+const groups = byYear.map(y => ({ year: y, items: pubs.filter((p:any)=>p.year===y) }));
+
+const TYPE_LABEL: Record<string, string> = {
+  'journal-article': 'Journal',
+  'book-chapter': 'Book Chapter',
+  'proceedings-article': 'Conference',
+  'conference-paper': 'Conference',
+  'other': 'Preprint',
+};
+const VENUE_SHORT: Record<string, string> = {
+  'ACM Computing Surveys': 'ACM CSUR',
+  'Applied Sciences': 'Applied Sciences',
+  'Arxiv': 'arXiv',
+  'Biomedical Signal Processing and Control': 'BSPC',
+  'Frontiers in Neurorobotics': 'Front. NeuroRobotics',
+  'IEEE Access': 'IEEE Access',
+  'IEEE Journal of Biomedical and Health Informatics': 'JBHI',
+  'IEEE Transactions on Cognitive and Developmental Systems': 'IEEE TCDS',
+  'IEEE Transactions on Emerging Topics in Computing': 'IEEE TETC',
+  'Ijcai International Joint Conference on Artificial Intelligence': 'IJCAI',
+  'International Journal of Human–Computer Interaction': 'IJHCI',
+  'Journal of Nephrology': 'J Nephrol',
+  'Lecture Notes in Computer Science': 'LNCS',
+  'Pattern Recognition Letters': 'PRL',
+  'PeerJ Computer Science': 'PeerJ CS',
+  'Proceedings of the 13th EAI International Conference on Pervasive Computing Technologies for Healthcare': 'PervasiveHealth',
+  'Proceedings of the 37th ACM/SIGAPP Symposium on Applied Computing': 'SAC',
+  'Proceedings of the ACM Symposium on Applied Computing': 'SAC',
+  'Sensors': 'Sensors',
+};
+const shortVenue = (venue?: string) => {
+  if (!venue) return '';
+  if (VENUE_SHORT[venue]) return VENUE_SHORT[venue];
+  const m = venue.match(/\(([A-Z0-9&/]+)\)\s*$/);
+  return m ? m[1] : venue;
+};
+const typeLabel = (type?: string) => (type && TYPE_LABEL[type]) || type || '';
+---
+
+<Base title="Publications — Alessandro D'Amelio" description={`Publications (${pubs.length} records).`}>
+  <div style="padding:28px 0 8px">
+    <h1 class="h1">Publications</h1>
+  </div>
+
+  {groups.map(g => (
+    <section style="margin-top:14px">
+      <h2 class="h2" style="border-bottom:1px solid var(--border);padding-bottom:6px">{g.year}</h2>
+      <div class="card">
+        {g.items.map((p:any) => (
+          <div class="pub">
+            <div class="pub-title">
+              <a href={p.doi ? `https://doi.org/${p.doi}` : p.url} target="_blank" rel="noopener">{p.title}</a>
+              <span class="badge badge-accent" style="margin-left:6px">{shortVenue(p.venue)} · {typeLabel(p.type)}</span>
+            </div>
+            <div class="pub-meta">{p.authors} · <em>{p.venue}</em> {p.citations ? `· ${p.citations} cites` : ''}</div>
+            <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap">
+              {p.doi && <a class="badge" href={`https://doi.org/${p.doi}`} target="_blank" rel="noopener">DOI</a>}
+              {p.url && !p.doi && <a class="badge" href={p.url} target="_blank" rel="noopener">Link</a>}
+              {p.pdf && <a class="badge" href={p.pdf} target="_blank" rel="noopener">PDF</a>}
+              <a class="badge" href={`https://scholar.google.it/scholar?q=${encodeURIComponent(p.title)}`} target="_blank" rel="noopener">Scholar</a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  ))}
+
+</Base>

@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+const news = (await getCollection('news')).sort((a,b)=>b.data.date.valueOf() - a.data.date.valueOf());
+const fmt = (d: Date) => d.toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' });
+---
+
+<Base title="News — Alessandro D'Amelio" description="News and updates from Alessandro D'Amelio">
+  <div style="padding:18px 0 6px">
+    <h1 class="h1">News</h1>
+  </div>
+  <div class="card">
+    {news.length === 0 && <p class="muted">No news yet.</p>}
+    {news.map(async (entry) => {
+      const { Content } = await entry.render();
+      return (
+        <article id={entry.slug} style="padding:16px 0;border-bottom:1px solid var(--border)">
+          <div style="display:flex;gap:12px;align-items:baseline;flex-wrap:wrap">
+            <span class="news-date" style="min-width:auto">{fmt(entry.data.date)}</span>
+            {entry.data.tags && <span class="badge badge-accent">{entry.data.tags[1]} · {entry.data.tags[0][0].toUpperCase() + entry.data.tags[0].slice(1)}</span>}
+            {entry.data.pinned && <span class="pill" style="font-size:0.68rem">Pinned</span>}
+          </div>
+          <h2 style="margin:8px 0 6px;font-size:1.08rem">{entry.data.title}</h2>
+          <div class="prose" style="font-size:0.92rem"><Content /></div>
+        </article>
+      );
+    })}
+  </div>
+</Base>

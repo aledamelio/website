@@ -1,0 +1,107 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import selected from '../data/selected.json';
+
+const selectedBold = (selected as any[]).map(p => ({
+  ...p,
+  authorsHtml: p.authors.replace(/D[’']Amelio/g, "<strong>D'Amelio</strong>"),
+}));
+
+const news = (await getCollection('news')).sort((a,b) => b.data.date.valueOf() - a.data.date.valueOf());
+const latestNews = news.slice(0, 4);
+const ord = (n: number) => {
+  const s = ['th', 'st', 'nd', 'rd'];
+  const v = n % 100;
+  return s[(v - 20) % 10] || s[v] || s[0];
+};
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const fmt = (d: Date) => `${d.getDate()}${ord(d.getDate())} ${MONTHS[d.getMonth()]} ${d.getFullYear()}`;
+---
+
+<Base title="Alessandro D'Amelio — UniMi">
+  <section class="hero">
+    <div class="hero-grid">
+      <!-- Left: description (with mini avatar) -->
+      <div>
+        <div class="pill" style="margin-bottom:2px"><span class="pill-dot"></span> Tenure Track Assistant Professor · UniMi</div>
+        <div style="display:flex;gap:20px;align-items:center;margin-top:14px;flex-wrap:wrap">
+          <img src="/assets/profile.jpg" alt="Alessandro D'Amelio" onerror="this.style.display='none'" style="width:160px;height:160px;border-radius:50%;object-fit:cover;border:3px solid #fff;outline:1px solid var(--border);box-shadow:var(--shadow);background:linear-gradient(135deg,#e0e7ff,#f0f4ff);flex-shrink:0" />
+          <h1 class="h1" style="margin:0;line-height:1.02">Alessandro D'Amelio</h1>
+        </div>
+        <p class="muted" style="margin:12px 0 0;font-size:1.02rem">Dipartimento di Informatica “Giovanni Degli Antoni” — Università degli Studi di Milano. Member of <a href="http://phuselab.di.unimi.it" target="_blank" rel="noopener">PHuSe Lab</a>.</p>
+        <div class="prose" style="margin-top:16px">
+          <p>I'm currently a Tenure Track Assistant Professor at the Computer Science department of Università degli Studi di Milano. Member of the PHuSe Lab.</p>
+          <p>Ph.D in Computer Science (2021), University of Milan. Research interests: computational modelling of visual attention, remote physiological sensing, affective computing, probabilistic Bayesian models and machine learning.</p>
+          <p>Projects: <a href="https://github.com/phuselab" target="_blank" rel="noopener">github.com/phuselab</a></p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px">
+          <a class="btn" href="mailto:alessandro.damelio@unimi.it">Email</a>
+          <a class="btn secondary" href="https://scholar.google.it/citations?user=chkawtoAAAAJ" target="_blank" rel="noopener">Scholar</a>
+          <a class="btn secondary" href="https://orcid.org/0000-0002-8210-4457" target="_blank" rel="noopener">ORCID</a>
+        </div>
+      </div>
+
+      <!-- Right: Latest news -->
+      <div class="card" style="align-self:start">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
+          <h2 class="h2" style="margin:0">Latest news</h2><a href="/news" style="font-size:0.86rem;font-weight:600">View all →</a>
+        </div>
+        <div style="margin-top:8px">
+          {latestNews.map(async n => {
+            const { Content } = await n.render();
+            const [type, venue] = n.data.tags ?? [];
+            const typeLabel = type ? type[0].toUpperCase() + type.slice(1) : '';
+            return (
+              <div class="news-item">
+                <div class="news-date">{fmt(n.data.date)}</div>
+                <div class="news-label"><a href={`/news#${n.slug}`}>{venue} · {typeLabel}</a></div>
+                <div class="news-body"><Content /></div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacts banner with icons -->
+  <section class="card" style="margin-top:18px">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div class="kicker">Contacts</div>
+      <a href="/contacts" style="font-size:0.84rem;font-weight:600">Full contacts →</a>
+    </div>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:12px">
+      <a href="mailto:alessandro.damelio@unimi.it" style="display:inline-flex;align-items:center;gap:8px;font-weight:600"><span style="width:28px;height:28px;border-radius:999px;display:grid;place-items:center;background:var(--accent-ghost);border:1px solid #dbeafe;color:var(--accent)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></span> alessandro.damelio@unimi.it</a>
+      <a href="tel:+390250316285" style="display:inline-flex;align-items:center;gap:8px;font-weight:600"><span style="width:28px;height:28px;border-radius:999px;display:grid;place-items:center;background:var(--accent-ghost);border:1px solid #dbeafe;color:var(--accent)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12 1.27.4 2.5.82 3.67a2 2 0 0 1-.57 2.11L8.09 10.91a16 16 0 0 0 6 6l1.41-1.41a2 2 0 0 1 2.11-.57c1.17.42 2.4.7 3.67.82A2 2 0 0 1 22 16.92z"/></svg></span> +39 02 503 16285</a>
+      <span style="display:inline-flex;align-items:center;gap:8px" class="muted"><span style="width:28px;height:28px;border-radius:999px;display:grid;place-items:center;background:#f8fafc;border:1px solid var(--border);color:var(--muted)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span> PHuSe Lab, Room 4022 · via Celoria 18, Milano</span>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
+      <a class="badge" href="https://scholar.google.it/citations?user=chkawtoAAAAJ" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 10L2 7l10-3 10 3-10 3z"/><path d="M6 12l6 3 6-3"/><path d="M6 16l6 3 6-3"/></svg> Scholar</a>
+      <a class="badge" href="https://orcid.org/0000-0002-8210-4457" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9 9h2v6H9z"/><circle cx="15" cy="9" r="1" fill="currentColor" stroke="none"/><path d="M13 15c0-1.5 1-2 2-2s2 .5 2 2-1 2-2 2-2-.5-2-2z"/></svg> ORCID</a>
+      <a class="badge" href="https://github.com/aledamelio" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> GitHub</a>
+      <a class="badge" href="https://github.com/phuselab" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5L3 6V3h3l11.5 11.5-3 3z"/><path d="M13 19l6-6"/><path d="M19 13l3 3v3h-3l-3-3z"/></svg> PHuSe Lab</a>
+      <a class="badge" href="https://www.linkedin.com/in/alessandro-d-amelio-aa76b8161" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn</a>
+      <a class="badge" href="https://twitter.com/AleDamelio92" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22 2.5a10.9 10.9 0 0 1-3.45 1.32A4.5 4.5 0 0 0 12 7.5a12.94 12.94 0 0 1-9.4-4.77 4.5 4.5 0 0 0 1.4 6A4.48 4.48 0 0 1 2 8.1a4.5 4.5 0 0 0 3.6 4.4A4.52 4.52 0 0 1 4.8 13a4.5 4.5 0 0 0 4.2 3.1A9.06 9.06 0 0 1 2 18.1 12.72 12.72 0 0 0 8.9 20c8.1 0 12.5-6.7 12.5-12.5 0-.2 0-.4 0-.6A8.9 8.9 0 0 0 23 3z"/></svg> X</a>
+    </div>
+  </section>
+
+  <section style="margin-top:18px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
+      <h2 class="h2" style="margin:0">Selected publications</h2>
+      <a href="/publications" style="font-size:0.9rem;font-weight:600">All publications →</a>
+    </div>
+    <div class="card">
+      {selectedBold.map((p:any) => (
+        <div class="pub">
+          <div class="pub-title">
+            {p.url || p.doi ? <a href={p.doi ? `https://doi.org/${p.doi}` : p.url} target="_blank" rel="noopener">{p.title}</a> : p.title}
+            <span class="muted" style="font-weight:400"> ({p.year})</span>
+            <span class="badge badge-accent" style="margin-left:6px">{p.short} · {p.type[0].toUpperCase() + p.type.slice(1)}</span>
+          </div>
+          <div class="pub-meta" set:html={`${p.authorsHtml} · <em>${p.venue}</em>`} />
+        </div>
+      ))}
+    </div>
+  </section>
+</Base>

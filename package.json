@@ -1,0 +1,19 @@
+{
+  "name": "aledamelio-site",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Sito personale Alessandro D'Amelio - Astro statico, 100% free, portabile",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "fetch-pubs": "python3 scripts/fetch_pubs.py"
+  },
+  "dependencies": {
+    "astro": "^5.13.0"
+  }
+}
