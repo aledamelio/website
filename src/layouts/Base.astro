@@ -6,11 +6,14 @@ interface Props {
 }
 const { title, description = "Alessandro D'Amelio — Tenure Track Assistant Professor, Computer Science, Università degli Studi di Milano. Visual Attention, Remote Physiological Sensing, Affective Computing.", ogImage = "/assets/profile.jpg" } = Astro.props;
 const path = Astro.url.pathname;
-// new URL('/x', site) scarta il path del site (es. /website) -> uniamo a mano
-const siteRoot = (Astro.site?.href ?? '').replace(/\/$/, '');
-const absUrl = (p: string) => new URL(siteRoot + (p.startsWith('/') ? p : `/${p}`));
-const canonical = absUrl(path);
-const isActive = (href: string) => href === '/' ? path === '/' : path.startsWith(href);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const navUrl = (p: string) => `${base}${p.startsWith('/') ? p : `/${p}`}`;
+const absUrl = (p: string) => new URL(p.startsWith('/') ? `${base}${p}` : `${base}/${p}`, Astro.site);
+const canonical = new URL(path, Astro.site);
+const isActive = (href: string) => {
+  const target = navUrl(href);
+  return href === '/' ? path === base || path === `${base}/` : path.startsWith(target);
+};
 ---
 <!doctype html>
 <html lang="en">
@@ -18,10 +21,9 @@ const isActive = (href: string) => href === '/' ? path === '/' : path.startsWith
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
-    {import.meta.env.PROD && <base href="/website/" />}
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={navUrl('/favicon.svg')} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
@@ -143,13 +145,13 @@ const isActive = (href: string) => href === '/' ? path === '/' : path.startsWith
   <body>
     <header>
       <div class="container nav">
-        <a class="brand" href="/">Alessandro <span>D'Amelio</span> <small>UniMi · PHuSe Lab</small></a>
+        <a class="brand" href={navUrl('/')}>Alessandro <span>D'Amelio</span> <small>UniMi · PHuSe Lab</small></a>
         <nav class="nav-links" aria-label="Primary">
-          <a href="/" aria-current={isActive('/') ? 'page' : undefined}>Home</a>
-          <a href="/publications" aria-current={isActive('/publications') ? 'page' : undefined}>Publications</a>
-          <a href="/activities" aria-current={isActive('/activities') ? 'page' : undefined}>Activities</a>
-          <a href="/teaching" aria-current={isActive('/teaching') ? 'page' : undefined}>Teaching</a>
-          <a href="/news" aria-current={isActive('/news') ? 'page' : undefined}>News</a>
+          <a href={navUrl('/')} aria-current={isActive('/') ? 'page' : undefined}>Home</a>
+          <a href={navUrl('/publications')} aria-current={isActive('/publications') ? 'page' : undefined}>Publications</a>
+          <a href={navUrl('/activities')} aria-current={isActive('/activities') ? 'page' : undefined}>Activities</a>
+          <a href={navUrl('/teaching')} aria-current={isActive('/teaching') ? 'page' : undefined}>Teaching</a>
+          <a href={navUrl('/news')} aria-current={isActive('/news') ? 'page' : undefined}>News</a>
         </nav>
       </div>
     </header>

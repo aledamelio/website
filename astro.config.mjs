@@ -9,8 +9,8 @@ import { defineConfig } from 'astro/config';
 // Se migrerai su server custom o su apex, cambia `site` (e <base href>) qui
 // e ricostruisci: npm run build -> dist/ è copiabile via rsync/scp ovunque.
 export default defineConfig({
-  site: 'https://aledamelio.github.io/website',
-  base: '/',
+  site: 'https://aledamelio.github.io',
+  base: '/website',
   output: 'static',
   build: {
     inlineStylesheets: 'auto',
