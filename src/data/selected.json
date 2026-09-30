@@ -30,6 +30,17 @@
     "type": "conference"
   },
   {
+    "title": "Remote Respiration Measurement with RGB Cameras: A Review and Benchmark",
+    "authors": "Boccignone, G., Cuculo, V., D'amelio, A., Grossi, G., Lanzarotti, R., & Patania, S.",
+    "venue": "ACM Computing Surveys",
+    "year": 2025,
+    "doi": "10.1145/3771763",
+    "url": "https://doi.org/10.1145/3771763",
+    "pdf": "https://dl.acm.org/doi/pdf/10.1145/3771763",
+    "citations": 4,
+    "type": "journal-article"
+  },
+  {
     "title": "Trends, Applications, and Challenges in Human Attention Modelling",
     "authors": "Cartella, G., Cornia, M., Cuculo, V., D'Amelio, A., Zanca, D., Boccignone, G., & Cucchiara, R.",
     "venue": "International Joint Conference on Artificial Intelligence (IJCAI)",
