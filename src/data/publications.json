@@ -22,6 +22,17 @@
     "type": "book-chapter"
   },
   {
+    "title": "Investigating Foundation Models, Disentanglement and Latent Alignment for Subject-Independent EEG Learning",
+    "authors": "Lia Schmid, Jacopo Burger, Alessandro D'Amelio, Raffaella Lanzarotti",
+    "venue": "Proceedings of the 28th International Conference On Multimodal Interaction",
+    "year": 2026,
+    "doi": "10.1145/3776574.3831192",
+    "url": "https://doi.org/10.1145/3776574.3831192",
+    "pdf": null,
+    "citations": 0,
+    "type": "proceedings-article"
+  },
+  {
     "title": "Marfan Syndrome Prediction Via Graph Neural Networks on 3D Facial Cues",
     "authors": "Giuseppe M. Facchi, Jacopo Taurino, Annalisa Cappella, Francesco Agnelli, Jacopo Burger, Riccardo Solazzo, Alessandro D'Amelio, Nathasha Udugampolage, Raffaella Lanzarotti, Chiarella Sforza, Gianluca Tartaglia, Giuliano Grossi",
     "venue": "IEEE Journal of Biomedical and Health Informatics",
@@ -100,7 +111,7 @@
   },
   {
     "title": "Modeling Human Gaze Behavior with Diffusion Models for Unified Scanpath Prediction",
-    "authors": "Cartella, Giuseppe, Cuculo, Vittorio, D'Amelio, Alessandro, Cornia, Marcella, Boccignone, Giuseppe, Cucchiara, Rita",
+    "authors": "Cartella, Giuseppe, Cuculo, Vittorio, Alessandro D’Amelio, Cornia, Marcella, Boccignone, Giuseppe, Cucchiara, Rita",
     "venue": "Arxiv",
     "year": 2025,
     "doi": "10.48550/arXiv.2507.23021",
@@ -183,7 +194,7 @@
     "doi": "10.1007/978-3-031-73013-9_13",
     "url": "https://doi.org/10.1007/978-3-031-73013-9_13",
     "pdf": null,
-    "citations": 7,
+    "citations": 8,
     "type": "book-chapter"
   },
   {
@@ -205,7 +216,7 @@
     "doi": "10.1007/978-3-031-51023-6_12",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85184081846&partnerID=MN8TOARS",
     "pdf": null,
-    "citations": 1,
+    "citations": 2,
     "type": "book-chapter"
   },
   {
@@ -293,7 +304,7 @@
     "doi": "10.3390/s23031262",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85147845451&partnerID=MN8TOARS",
     "pdf": "https://www.mdpi.com/1424-8220/23/3/1262/pdf?version=1675389294",
-    "citations": 11,
+    "citations": 12,
     "type": "journal-article"
   },
   {
@@ -337,7 +348,7 @@
     "doi": "10.7717/peerj-cs.929",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85130064496&partnerID=MN8TOARS",
     "pdf": null,
-    "citations": 77,
+    "citations": 78,
     "type": "journal-article"
   },
   {
@@ -392,7 +403,7 @@
     "doi": "10.1007/978-3-030-54994-7_12",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85089715098&partnerID=MN8TOARS",
     "pdf": null,
-    "citations": 4,
+    "citations": 5,
     "type": "book-chapter"
   },
   {
