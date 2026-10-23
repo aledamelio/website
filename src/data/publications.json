@@ -88,17 +88,6 @@
     "type": "journal-article"
   },
   {
-    "title": "From stethoscope to ultrasound: an Italian survey of nephrology ultrasound practice",
-    "authors": "Paolo Lentini, Michele Antonio Prencipe, Maurizio Garozzo, Fulvio Fiorini, Alessandro D’Amelio, Mauro Forcella, Alessio Montanaro, Federica Baciga, Antonio Granata, Giovanni Santarsia, Yuri Battaglia, ",
-    "venue": "Journal of Nephrology",
-    "year": 2025,
-    "doi": "10.1007/s40620-025-02445-9",
-    "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-105023501646&partnerID=MN8TOARS",
-    "pdf": null,
-    "citations": 1,
-    "type": "journal-article"
-  },
-  {
     "title": "Graph Neural Networks for 3D facial morphology: Assessing the effectiveness of anthropometric and automated landmark detection",
     "authors": "Giuseppe Maurizio Facchi, Giuliano Grossi, Alessandro D’Amelio, Francesco Agnelli, Chiarella Sforza, Gianluca Martino Tartaglia, Raffaella Lanzarotti",
     "venue": "Pattern Recognition Letters",
@@ -111,7 +100,7 @@
   },
   {
     "title": "Modeling Human Gaze Behavior with Diffusion Models for Unified Scanpath Prediction",
-    "authors": "Cartella, Giuseppe, Cuculo, Vittorio, Alessandro D’Amelio, Cornia, Marcella, Boccignone, Giuseppe, Cucchiara, Rita",
+    "authors": "Giuseppe Cartella, Vittorio Cuculo, Alessandro D’Amelio, Marcella Cornia, Giuseppe Boccignone, Rita Cucchiara",
     "venue": "Arxiv",
     "year": 2025,
     "doi": "10.48550/arXiv.2507.23021",
@@ -133,13 +122,13 @@
   },
   {
     "title": "On using AI for EEG-based BCI applications: problems, current challenges and future trends",
-    "authors": "Barbera, Thomas, Burger, Jacopo, D'Amelio, Alessandro, Zini, Simone, Bianco, Simone, Lanzarotti, Raffaella, Napoletano, Paolo, Boccignone, Giuseppe, Contreras-Vidal, Jose Luis",
+    "authors": "Thomas Barbera, Jacopo Burger, Alessandro D’Amelio, Simone Zini, Simone Bianco, Raffaella Lanzarotti, Paolo Napoletano, Giuseppe Boccignone, José L. Contreras-Vidal",
     "venue": "Arxiv",
     "year": 2025,
     "doi": "10.48550/arXiv.2506.16168",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-105009936970&partnerID=MN8TOARS",
-    "pdf": "https://arxiv.org/pdf/2506.16168",
-    "citations": 0,
+    "pdf": null,
+    "citations": 9,
     "type": "other"
   },
   {
@@ -216,7 +205,7 @@
     "doi": "10.1007/978-3-031-51023-6_12",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85184081846&partnerID=MN8TOARS",
     "pdf": null,
-    "citations": 2,
+    "citations": 3,
     "type": "book-chapter"
   },
   {
@@ -254,13 +243,13 @@
   },
   {
     "title": "Trends, Applications, and Challenges in Human Attention Modelling",
-    "authors": "Giuseppe Cartella, Marcella Cornia, Vittorio Cuculo, Alessandro D’Amelio, Dario Zanca, Giuseppe Boccignone, Rita Cucchiara",
+    "authors": "Giuseppe Cartella, Marcella Cornia, Vittorio Cuculo, Alessandro D'Amelio, Dario Zanca, Giuseppe Boccignone, Rita Cucchiara",
     "venue": "Arxiv",
     "year": 2024,
     "doi": "10.48550/arXiv.2402.18673",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85194013356&partnerID=MN8TOARS",
-    "pdf": "https://arxiv.org/pdf/2402.18673",
-    "citations": 1,
+    "pdf": "https://www.ijcai.org/proceedings/2024/0882.pdf",
+    "citations": 11,
     "type": "other"
   },
   {
@@ -326,7 +315,7 @@
     "doi": "10.1007/978-3-031-06430-2_16",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85130970317&partnerID=MN8TOARS",
     "pdf": null,
-    "citations": 15,
+    "citations": 16,
     "type": "book-chapter"
   },
   {
@@ -348,7 +337,7 @@
     "doi": "10.7717/peerj-cs.929",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85130064496&partnerID=MN8TOARS",
     "pdf": null,
-    "citations": 78,
+    "citations": 79,
     "type": "journal-article"
   },
   {
@@ -381,7 +370,7 @@
     "doi": "10.1109/ACCESS.2020.3040936",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85097850588&partnerID=MN8TOARS",
     "pdf": "https://ieeexplore.ieee.org/ielx7/6287639/6514899/09272290.pdf",
-    "citations": 109,
+    "citations": 108,
     "type": "journal-article"
   },
   {
@@ -392,7 +381,7 @@
     "doi": "10.1007/978-3-030-54994-7_15",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85089722040&partnerID=MN8TOARS",
     "pdf": null,
-    "citations": 28,
+    "citations": 29,
     "type": "book-chapter"
   },
   {
@@ -414,7 +403,7 @@
     "doi": "10.1007/978-3-030-54994-7_10",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85089718638&partnerID=MN8TOARS",
     "pdf": null,
-    "citations": 13,
+    "citations": 14,
     "type": "book-chapter"
   },
   {
@@ -458,7 +447,7 @@
     "doi": "10.1007/978-3-030-34110-7_20",
     "url": "https://doi.org/10.1007/978-3-030-34110-7_20",
     "pdf": null,
-    "citations": 17,
+    "citations": 18,
     "type": "book-chapter"
   },
   {
@@ -469,7 +458,7 @@
     "doi": "10.1007/978-3-030-30645-8_4",
     "url": "https://doi.org/10.1007/978-3-030-30645-8_4",
     "pdf": null,
-    "citations": 10,
+    "citations": 12,
     "type": "book-chapter"
   },
   {
@@ -524,7 +513,7 @@
     "doi": "10.1007/978-3-030-04771-9_14",
     "url": "https://doi.org/10.1007/978-3-030-04771-9_14",
     "pdf": null,
-    "citations": 10,
+    "citations": 11,
     "type": "book-chapter"
   },
   {
@@ -535,7 +524,7 @@
     "doi": "10.1007/978-3-030-01449-0_25",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85054873030&partnerID=MN8TOARS",
     "pdf": null,
-    "citations": 16,
+    "citations": 17,
     "type": "book-chapter"
   },
   {
