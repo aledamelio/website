@@ -22,6 +22,17 @@
     "type": "book-chapter"
   },
   {
+    "title": "Eyegent: Visual Attention Orchestration on Concepts",
+    "authors": "Alessandro D’Amelio, Sabrina Patania, Luca Annese, Giuseppe Boccignone",
+    "venue": "International Journal of Computer Vision",
+    "year": 2026,
+    "doi": "10.1007/s11263-026-03042-4",
+    "url": "https://doi.org/10.1007/s11263-026-03042-4",
+    "pdf": null,
+    "citations": 0,
+    "type": "journal-article"
+  },
+  {
     "title": "Investigating Foundation Models, Disentanglement and Latent Alignment for Subject-Independent EEG Learning",
     "authors": "Lia Schmid, Jacopo Burger, Alessandro D'Amelio, Raffaella Lanzarotti",
     "venue": "Proceedings of the 28th International Conference On Multimodal Interaction",
@@ -150,7 +161,7 @@
     "doi": "10.1007/978-3-031-91578-9_17",
     "url": "https://doi.org/10.1007/978-3-031-91578-9_17",
     "pdf": null,
-    "citations": 1,
+    "citations": 2,
     "type": "book-chapter"
   },
   {
@@ -161,7 +172,7 @@
     "doi": "10.1109/WACV61041.2025.00851",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-105003630320&partnerID=MN8TOARS",
     "pdf": null,
-    "citations": 6,
+    "citations": 7,
     "type": "proceedings-article"
   },
   {
@@ -337,7 +348,7 @@
     "doi": "10.7717/peerj-cs.929",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85130064496&partnerID=MN8TOARS",
     "pdf": null,
-    "citations": 79,
+    "citations": 80,
     "type": "journal-article"
   },
   {
@@ -370,7 +381,7 @@
     "doi": "10.1109/ACCESS.2020.3040936",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85097850588&partnerID=MN8TOARS",
     "pdf": "https://ieeexplore.ieee.org/ielx7/6287639/6514899/09272290.pdf",
-    "citations": 108,
+    "citations": 109,
     "type": "journal-article"
   },
   {
