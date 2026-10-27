@@ -1,5 +1,19 @@
 [
   {
+    "title": "Eyegent: Visual Attention Orchestration on Concepts",
+    "authors": "D'Amelio, A., Patania, S., Annese, L., & Boccignone, G.",
+    "venue": "International Journal of Computer Vision, 134(11), Article 493",
+    "year": 2026,
+    "volume": "134",
+    "number": "11",
+    "pages": "493",
+    "issn": "1573-1405",
+    "doi": "10.1007/s11263-026-03042-4",
+    "url": "https://doi.org/10.1007/s11263-026-03042-4",
+    "short": "IJCV",
+    "type": "journal-article"
+  },
+  {
     "title": "TPP-Gaze: Modelling Gaze Dynamics in Space and Time with Neural Temporal Point Processes",
     "authors": "D'Amelio, A., Cartella, G., Cuculo, V., Lucchi, M., Cornia, M., Cucchiara, R., & Boccignone, G.",
     "venue": "Winter Conference on Applications of Computer Vision (WACV)",
@@ -33,6 +47,7 @@
     "title": "Remote Respiration Measurement with RGB Cameras: A Review and Benchmark",
     "authors": "Boccignone, G., Cuculo, V., D'Amelio, A., Grossi, G., Lanzarotti, R., & Patania, S.",
     "venue": "ACM Computing Surveys",
+    "short": "CSUR",
     "year": 2025,
     "doi": "10.1145/3771763",
     "url": "https://doi.org/10.1145/3771763",
