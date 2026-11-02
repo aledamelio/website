@@ -28,7 +28,7 @@
     "year": 2026,
     "doi": "10.1007/s11263-026-03042-4",
     "url": "https://doi.org/10.1007/s11263-026-03042-4",
-    "pdf": null,
+    "pdf": "https://link.springer.com/content/pdf/10.1007/s11263-026-03042-4.pdf",
     "citations": 0,
     "type": "journal-article"
   },
@@ -106,7 +106,7 @@
     "doi": "10.1016/j.patrec.2025.04.028",
     "url": "https://doi.org/10.1016/j.patrec.2025.04.028",
     "pdf": null,
-    "citations": 9,
+    "citations": 10,
     "type": "journal-article"
   },
   {
@@ -116,7 +116,7 @@
     "year": 2025,
     "doi": "10.48550/arXiv.2507.23021",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-105017901641&partnerID=MN8TOARS",
-    "pdf": null,
+    "pdf": "https://arxiv.org/pdf/2507.23021",
     "citations": 0,
     "type": "other"
   },
@@ -150,7 +150,7 @@
     "doi": "10.1145/3771763",
     "url": "https://doi.org/10.1145/3771763",
     "pdf": "https://dl.acm.org/doi/pdf/10.1145/3771763",
-    "citations": 4,
+    "citations": 5,
     "type": "journal-article"
   },
   {
@@ -260,7 +260,7 @@
     "doi": "10.48550/arXiv.2402.18673",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85194013356&partnerID=MN8TOARS",
     "pdf": "https://www.ijcai.org/proceedings/2024/0882.pdf",
-    "citations": 11,
+    "citations": 12,
     "type": "other"
   },
   {
@@ -326,7 +326,7 @@
     "doi": "10.1007/978-3-031-06430-2_16",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85130970317&partnerID=MN8TOARS",
     "pdf": null,
-    "citations": 16,
+    "citations": 17,
     "type": "book-chapter"
   },
   {
@@ -348,7 +348,7 @@
     "doi": "10.7717/peerj-cs.929",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85130064496&partnerID=MN8TOARS",
     "pdf": null,
-    "citations": 80,
+    "citations": 81,
     "type": "journal-article"
   },
   {
@@ -370,7 +370,7 @@
     "doi": "10.3389/fnbot.2021.639999",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85104060295&partnerID=MN8TOARS",
     "pdf": "https://www.frontiersin.org/articles/10.3389/fnbot.2021.639999/pdf",
-    "citations": 7,
+    "citations": 8,
     "type": "journal-article"
   },
   {
