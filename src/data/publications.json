@@ -18,7 +18,7 @@
     "doi": "10.1007/978-3-032-11317-7_2",
     "url": "https://doi.org/10.1007/978-3-032-11317-7_2",
     "pdf": null,
-    "citations": 0,
+    "citations": 1,
     "type": "book-chapter"
   },
   {
@@ -116,8 +116,8 @@
     "year": 2025,
     "doi": "10.48550/arXiv.2507.23021",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-105017901641&partnerID=MN8TOARS",
-    "pdf": "https://arxiv.org/pdf/2507.23021",
-    "citations": 0,
+    "pdf": null,
+    "citations": 7,
     "type": "other"
   },
   {
@@ -128,7 +128,7 @@
     "doi": "10.1080/10447318.2025.2561185",
     "url": "https://doi.org/10.1080/10447318.2025.2561185",
     "pdf": null,
-    "citations": 9,
+    "citations": 11,
     "type": "journal-article"
   },
   {
@@ -139,7 +139,7 @@
     "doi": "10.48550/arXiv.2506.16168",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-105009936970&partnerID=MN8TOARS",
     "pdf": null,
-    "citations": 9,
+    "citations": 11,
     "type": "other"
   },
   {
@@ -150,7 +150,7 @@
     "doi": "10.1145/3771763",
     "url": "https://doi.org/10.1145/3771763",
     "pdf": "https://dl.acm.org/doi/pdf/10.1145/3771763",
-    "citations": 5,
+    "citations": 6,
     "type": "journal-article"
   },
   {
@@ -172,7 +172,7 @@
     "doi": "10.1109/WACV61041.2025.00851",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-105003630320&partnerID=MN8TOARS",
     "pdf": null,
-    "citations": 7,
+    "citations": 8,
     "type": "proceedings-article"
   },
   {
@@ -232,13 +232,13 @@
   },
   {
     "title": "TPP-Gaze: Modelling Gaze Dynamics in Space and Time with Neural Temporal Point Processes",
-    "authors": "Alessandro D’Amelio, Giuseppe Cartella, Vittorio Cuculo, Lucchi, Manuele, Marcella Cornia, Rita Cucchiara, Giuseppe Boccignone",
+    "authors": "Alessandro D’Amelio, Giuseppe Cartella, Vittorio Cuculo, Manuele Lucchi, Marcella Cornia, Rita Cucchiara, Giuseppe Boccignone",
     "venue": "Arxiv",
     "year": 2024,
     "doi": "10.48550/arXiv.2410.23409",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85210501758&partnerID=MN8TOARS",
-    "pdf": "https://arxiv.org/pdf/2410.23409",
-    "citations": 1,
+    "pdf": null,
+    "citations": 8,
     "type": "other"
   },
   {
@@ -260,7 +260,7 @@
     "doi": "10.48550/arXiv.2402.18673",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85194013356&partnerID=MN8TOARS",
     "pdf": "https://www.ijcai.org/proceedings/2024/0882.pdf",
-    "citations": 12,
+    "citations": 20,
     "type": "other"
   },
   {
@@ -293,7 +293,7 @@
     "doi": "10.1007/978-3-031-43153-1_20",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85173583929&partnerID=MN8TOARS",
     "pdf": null,
-    "citations": 5,
+    "citations": 8,
     "type": "book-chapter"
   },
   {
@@ -304,7 +304,7 @@
     "doi": "10.3390/s23031262",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85147845451&partnerID=MN8TOARS",
     "pdf": "https://www.mdpi.com/1424-8220/23/3/1262/pdf?version=1675389294",
-    "citations": 12,
+    "citations": 14,
     "type": "journal-article"
   },
   {
@@ -315,7 +315,7 @@
     "doi": "10.1145/3477314.3507094",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85130403225&partnerID=MN8TOARS",
     "pdf": null,
-    "citations": 20,
+    "citations": 21,
     "type": "proceedings-article"
   },
   {
@@ -326,7 +326,7 @@
     "doi": "10.1007/978-3-031-06430-2_16",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85130970317&partnerID=MN8TOARS",
     "pdf": null,
-    "citations": 17,
+    "citations": 21,
     "type": "book-chapter"
   },
   {
@@ -392,7 +392,7 @@
     "doi": "10.1007/978-3-030-54994-7_15",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85089722040&partnerID=MN8TOARS",
     "pdf": null,
-    "citations": 29,
+    "citations": 30,
     "type": "book-chapter"
   },
   {
@@ -414,7 +414,7 @@
     "doi": "10.1007/978-3-030-54994-7_10",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85089718638&partnerID=MN8TOARS",
     "pdf": null,
-    "citations": 14,
+    "citations": 15,
     "type": "book-chapter"
   },
   {
@@ -425,7 +425,7 @@
     "doi": "10.3390/app10114002",
     "url": "https://doi.org/10.3390/app10114002",
     "pdf": "https://www.mdpi.com/2076-3417/10/11/4002/pdf?version=1591702481",
-    "citations": 27,
+    "citations": 32,
     "type": "journal-article"
   },
   {
@@ -436,7 +436,7 @@
     "doi": "10.1109/ACCESS.2020.3021211",
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85091272689&partnerID=MN8TOARS",
     "pdf": "https://ieeexplore.ieee.org/ielx7/6287639/8948470/09184838.pdf",
-    "citations": 17,
+    "citations": 18,
     "type": "journal-article"
   },
   {
@@ -447,7 +447,7 @@
     "doi": "10.1007/978-3-030-11012-3_27",
     "url": "https://doi.org/10.1007/978-3-030-11012-3_27",
     "pdf": null,
-    "citations": 12,
+    "citations": 11,
     "type": "book-chapter"
   },
   {
@@ -458,7 +458,7 @@
     "doi": "10.1007/978-3-030-34110-7_20",
     "url": "https://doi.org/10.1007/978-3-030-34110-7_20",
     "pdf": null,
-    "citations": 18,
+    "citations": 20,
     "type": "book-chapter"
   },
   {
@@ -480,7 +480,7 @@
     "doi": "10.3390/s19010146",
     "url": "http://www.mdpi.com/1424-8220/19/1/146",
     "pdf": "https://www.mdpi.com/1424-8220/19/1/146/pdf?version=1546516198",
-    "citations": 26,
+    "citations": 27,
     "type": "journal-article"
   },
   {
